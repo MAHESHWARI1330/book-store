@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Literary Delights</title>
+    <style>
+      * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+          color: #faf7f7;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+     
+        /* The dots/bullets/indicators */
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 3s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+    
+        </style>
+        </head>
+<body>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade" style=" text-align: center;">
+          <img src="img1.png" style="width:500px;" >
+        </div>
+        
+        <div class="mySlides fade" style=" text-align: center;">
+          <img src="img2.png" style="width:500px;">
+        </div>
+        
+        <div class="mySlides fade" style=" text-align: center;">
+          <img src="img3.png" style="width:500px;">
+        </div>
+
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script> 
+
+    <center>
+        <h1 style="color:rgb(232, 122, 6);"><b>Welcome to Literary Delights</b></h1>
+        <br>
+        <p style="color:rgb(237, 243, 246);">Which Book do you prefer?</p>
+        <a class="btn btn-info btn-lg" href="https://www.goodreads.com/shelf/show/free-online-fiction" role="button">Fiction</a>
+        <a class="btn btn-info btn-lg" href="https://www.goodreads.com/list/show/41908.Best_Tamil_Historical_Fictions" role="button">Historical</a><br><br>
+        <a class="btn btn-info btn-lg" href="https://www.goodreads.com/shelf/show/horror-thriller" role="button">Horror & Thriller</a>
+        <a class="btn btn-info btn-lg" href="https://www.inkitt.com/genres/mystery" role="button">Mystery</a><br><br>
+        <a class="btn btn-info btn-lg" href="index.html" role="button">Log Out</a><br>
+        <div class="row">
+          <div class="col-5 offset-3">
+        <p>click here to buy the different types of books?</p>
+      </div>
+     <div class="col-1">
+      <a class="btn btn-info" href="https://www.bookswagon.com/" role="button">click here</a>
+    </div>
+  </div>
+    </center>
+    
+
+     
+        
+    
+</body>
+</html>
